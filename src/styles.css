@@ -1,1 +1,5 @@
 /* You can add global styles to this file, and also import other style files */
+body {
+  font-family: "Comic Sans MS", sans-serif;
+  background: linear-gradient(to right, #6a3093, #a044ff);
+}
