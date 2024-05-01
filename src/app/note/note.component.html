@@ -35,7 +35,12 @@
       <h1>Бележка №{{ i + 1 }}</h1>
       <h2 (click)="selectNote(i)">{{ savedNote.title }}</h2>
       <p>{{ savedNote.content }}</p>
-      <button *ngIf="i === selectedNoteIndex" (click)="editNote()">Edit</button>
+      <button
+        *ngIf="i === selectedNoteIndex"
+        (click)="editNote(selectedNoteIndex)"
+      >
+        Edit
+      </button>
       <button *ngIf="i === selectedNoteIndex" (click)="deleteNote()">
         Delete
       </button>

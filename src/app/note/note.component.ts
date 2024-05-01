@@ -41,14 +41,13 @@ export class NoteComponent {
   selectNote(index: number) {
     this.selectedNoteIndex = index;
     this.note = { ...this.notes[index] };
+    this.title.setValue(this.notes[index].title);
+    this.content.setValue(this.notes[index].content);
   }
 
-  editNote() {
-    if (this.selectedNoteIndex !== null) {
-      this.notes[this.selectedNoteIndex] = { ...this.note };
-      this.note = { title: '', content: '' };
-      this.selectedNoteIndex = null;
-    }
+  editNote(index: number) {
+    this.notes[index].title = this.title.value!;
+    this.notes[index].content = this.content.value!;
   }
 
   deleteNote() {
